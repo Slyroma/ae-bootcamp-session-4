@@ -1,0 +1,16 @@
+{
+  "practice_leads": [
+    {
+      "username": "mona.lead",
+      "password_hash": "507d35caaf5f9ab1471891f6d7b01636:bdb92402b10a832e0b2c54ba1fa7ed602e832b152f760d132efe5e82cf5ba1c4",
+      "role": "practice_lead",
+      "practice_areas": ["Technology", "Strategy"]
+    },
+    {
+      "username": "marcus.lead",
+      "password_hash": "5d833a0638c6045e1f1ae87b8d23a02c:1e263d70e6b2178489546db137736bd0ea0ad80eaa5c8c4a727caf79adf12a90",
+      "role": "practice_lead",
+      "practice_areas": ["Build", "Operations"]
+    }
+  ]
+}
