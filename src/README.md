@@ -36,9 +36,22 @@ A FastAPI application that enables Slalom consultants to register their capabili
 
 | Method | Endpoint                                                          | Description                                                         |
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
+| POST   | `/auth/login`                                                     | Authenticate a practice lead and return a bearer token             |
+| POST   | `/auth/logout`                                                    | End the current authenticated session                              |
+| GET    | `/auth/me`                                                        | Validate token and return current authenticated user               |
 | GET    | `/capabilities`                                                   | Get all capabilities with details and current consultant assignments |
 | POST   | `/capabilities/{capability_name}/register?email=consultant@slalom.com` | Register consultant for a capability                     |
 | DELETE | `/capabilities/{capability_name}/unregister?email=consultant@slalom.com` | Unregister consultant from a capability              |
+
+## Practice Lead Authentication
+
+- Role-based access is enforced for registration and unregistration actions.
+- Sessions expire after eight hours and can be ended from the dashboard.
+- Practice leads can modify capabilities only in their assigned practice areas.
+- Login, logout, authorization, and capability changes are written to the server audit log.
+- Use the following seeded accounts for local testing:
+   - Username: `mona.lead` / Password: `lead123!`
+   - Username: `marcus.lead` / Password: `strategy456!`
 
 ## Data Model
 
